@@ -1,0 +1,22 @@
+# ---- Core LLM stack ----
+anthropic>=0.40.0          # Anthropic (Claude) API client
+instructor>=1.6.0          # Structured LLM output backed by Pydantic
+pydantic>=2.9.0            # Schema definition + validation
+
+# ---- Config ----
+python-dotenv>=1.0.0       # Loads ANTHROPIC_API_KEY from .env
+
+# ---- Reliability ----
+tenacity>=9.0.0            # Retry logic for flaky/rate-limited API calls
+
+# ---- Data + analysis ----
+pandas>=2.2.0              # Aggregation and tabular metrics
+numpy>=1.26.0             # Numeric helpers (similarity, distributions)
+datasets>=3.0.0           # Pulls the Hugging Face benchmark dataset
+
+# ---- Visualization ----
+matplotlib>=3.9.0          # Charts (bar, paired)
+seaborn>=0.13.0           # Heatmap + nicer styling
+
+# ---- Dev quality (optional but recommended) ----
+ruff>=0.6.0               # Fast linter/formatter

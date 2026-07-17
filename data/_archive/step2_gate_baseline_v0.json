@@ -1,0 +1,386 @@
+{
+  "run_label": "baseline",
+  "generated_at": "2026-07-15T21:29:39.817845+00:00",
+  "input_count": 50,
+  "passed_count": 40,
+  "rejected_count": 10,
+  "pass_rate": 0.8,
+  "hard_rejections": {
+    "scope_safety": 1,
+    "duplicate": 9
+  },
+  "advisory_flag_counts": {
+    "tool_realism": 6
+  },
+  "category_distribution": {
+    "observed": {
+      "appliance_repair": {
+        "count": 8,
+        "share": 0.2
+      },
+      "plumbing_repair": {
+        "count": 6,
+        "share": 0.15
+      },
+      "electrical_repair": {
+        "count": 6,
+        "share": 0.15
+      },
+      "hvac_maintenance": {
+        "count": 10,
+        "share": 0.25
+      },
+      "general_home_repair": {
+        "count": 10,
+        "share": 0.25
+      }
+    },
+    "benchmark": {
+      "appliance_repair": 0.2,
+      "plumbing_repair": 0.2,
+      "electrical_repair": 0.2,
+      "hvac_maintenance": 0.2,
+      "general_home_repair": 0.2
+    },
+    "min_share_threshold": 0.2,
+    "below_threshold": [
+      "plumbing_repair",
+      "electrical_repair"
+    ],
+    "distribution_ok": false
+  },
+  "per_item": [
+    {
+      "trace_id": "baseline_000",
+      "decision": "reject",
+      "hard_reasons": [
+        "scope_safety"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_001",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_002",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_003",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_004",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_005",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_006",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_007",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_009",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_010",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_011",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_012",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_013",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism"
+      ]
+    },
+    {
+      "trace_id": "baseline_014",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_015",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_016",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_017",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_019",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_020",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_021",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_022",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_024",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_025",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_026",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_027",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_028",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism"
+      ]
+    },
+    {
+      "trace_id": "baseline_029",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_030",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_031",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_032",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_033",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_034",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_035",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_036",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_037",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_038",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_039",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_040",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_041",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_042",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_043",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_044",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_045",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_046",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_047",
+      "decision": "reject",
+      "hard_reasons": [
+        "duplicate"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_049",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "baseline_050",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism"
+      ]
+    },
+    {
+      "trace_id": "baseline_051",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism"
+      ]
+    },
+    {
+      "trace_id": "baseline_053",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism"
+      ]
+    },
+    {
+      "trace_id": "baseline_054",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism"
+      ]
+    }
+  ]
+}
