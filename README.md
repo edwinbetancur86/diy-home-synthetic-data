@@ -43,7 +43,47 @@ copy .env.example .env         # Windows  (cp on macOS/Linux)
 
 ## Running the pipeline
 
-*(Commands are added here as each step's module is built.)*
+Every step is a standalone module run with `python -m`. Steps 1 and 4 call the Claude API
+(cost money); Steps 2, 3, and 5 do not. A `--run-label` names the dataset a step reads/writes,
+which keeps the **weak** (before) and **baseline** (after) runs in separate files.
+
+```bash
+# ── The "after" / corrected run (the clean generator) ───────────────────────
+python -m src.step1_generate --count 50 --run-label baseline            # 1. generate  (API)
+python -m src.step2_gate                --run-label baseline            # 2. quality gate
+python -m src.step3_label               --run-label baseline            # 3. human labeling (interactive CLI, ≥20 items)
+python -m src.step4_judge               --run-label baseline            # 4. LLM-as-judge  (API)
+
+# ── The "before" / weak run (deliberately degraded prompt — see docs/iteration_log.md) ──
+python -m src.step1_generate --count 50 --run-label weak --version generator_v0_weak   # (API)
+python -m src.step2_gate                --run-label weak
+python -m src.step4_judge               --run-label weak                # (API)
+
+# ── Analysis + charts (no API calls; reads the committed label files) ───────
+python -m src.step5_analyze --before weak --after baseline              # 5. metrics + visualizations
+```
+
+Handy flags: `step4_judge --dry-run` prints a judge prompt without spending credits;
+`step1_generate --category electrical_repair --count 1` tops up one category to hold the
+20 %/category floor; both label steps are resumable (they skip already-done items).
+
+## Results
+
+Scored by the calibrated LLM judge (Haiku 4.5 @ temp 0.0), n = 50 per run:
+
+| | before (`generator_v0_weak`) | after (`generator_v1_baseline`) |
+|---|---|---|
+| Overall failure rate | **30 %** (15/50) | **2 %** (1/50) |
+
+```
+improvement = (0.30 − 0.02) / 0.30 = 0.93   →   93 %   ≥ 0.80   ✅ PASS
+```
+
+Human ↔ judge agreement (Phase A calibration, 30-item overlap) is **≥ 93 % on every dimension**,
+so no judge recalibration was needed. Charts in [`visualizations/`](./visualizations/):
+`failure_before_after.png`, `agreement_by_dimension.png`, `weak_segment_heatmap.png`. Full
+decision record in [`docs/iteration_log.md`](./docs/iteration_log.md); metrics JSON in
+[`data/reports/step5_analysis.json`](./data/reports/step5_analysis.json).
 
 ## Repository layout
 

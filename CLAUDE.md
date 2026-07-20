@@ -127,11 +127,25 @@ Benchmark dataset (distribution reference ONLY, not for labeling):
 ## 9. Common commands
 
 ```bash
-pip install -r requirements.txt      # install deps
-python -m src.step1_generate         # (modules added as we build each step)
-```
+pip install -r requirements.txt                                          # install deps
 
-*(Commands will be filled in as each step's module is created.)*
+# Pipeline (per run-label). Steps 1 & 4 hit the Claude API; 2, 3, 5 do not.
+python -m src.step1_generate --count 50 --run-label baseline             # 1. generate (API)
+python -m src.step2_gate                --run-label baseline             # 2. quality gate
+python -m src.step3_label               --run-label baseline             # 3. human labeling (interactive)
+python -m src.step4_judge               --run-label baseline             # 4. LLM-as-judge (API)
+python -m src.step5_analyze --before weak --after baseline               # 5. metrics + charts
+
+# Step 6 Phase B — the deliberately-weakened "before" run (see docs/iteration_log.md)
+python -m src.step1_generate --count 50 --run-label weak --version generator_v0_weak   # (API)
+python -m src.step2_gate                --run-label weak
+python -m src.step4_judge               --run-label weak                 # (API)
+
+# Useful flags
+python -m src.step4_judge    --run-label baseline --dry-run              # print a judge prompt, no API cost
+python -m src.step1_generate --run-label baseline --category electrical_repair --count 1   # top up one category
+python -m scripts.save_label baseline <trace_id> 1 1 1 1 1 1            # record one human label non-interactively
+```
 
 ---
 
