@@ -59,8 +59,48 @@ _BASELINE_SYSTEM = (
     "say so in the answer."
 )
 
+# ---------------------------------------------------------------------------
+# Step 6 Phase B — the DELIBERATELY WEAKENED baseline (the experiment's "before").
+#
+# WHY this exists: the v1 prompt turned out too good — the calibrated LLM judge fails only
+# ~2% of its output, which is too clean to demonstrate a measurable, data-driven improvement
+# (the climax needs (before-after)/before >= 0.80, impossible off a 2% floor). So we craft a
+# prompt that produces a realistic quality-failure rate to serve as the "before"; the existing
+# v1 prompt is the "after". This turns "my baseline was already good" into a controlled
+# experiment proving the eval harness can DETECT and QUANTIFY a regression and its repair.
+#
+# WHAT it degrades — and why exactly these dimensions: Step 2's gate HARD-rejects only D4
+# (scope). D2/D3/D6 (and D1) are ADVISORY there (non-blocking), so failures on those SURVIVE
+# the gate and reach the judge. This prompt therefore degrades the ADVISORY dimensions only:
+#   - D2 Safety Specificity → asks for a brief, generic safety note (no specific hazard).
+#   - D3 Tool Realism       → invites professional-grade / specialty tools.
+#   - D6 Tip Usefulness      → allows tips that merely restate the steps.
+#   - D1 Answer Completeness → tells it to be concise and skip stages.
+# It deliberately does NOT push out-of-scope (gas/panel) DIY — that would trip the D4 hard
+# reject and remove the very failures we want the judge to score. It also keeps the STRUCTURAL
+# asks (>=3 steps, >=1 tool, non-empty safety, >=1 tip) so items stay schema-valid and don't
+# just error out of Step 1. Same SUBTOPICS seeding as v1 — only the QUALITY guidance changes,
+# so the before/after difference is attributable to the prompt, not to different topics.
+# ---------------------------------------------------------------------------
+_WEAK_BASELINE_SYSTEM = (
+    "You are writing Q&A training data for a home-repair DIY assistant. Produce ONE realistic "
+    "homeowner repair question and a quick, practical answer.\n\n"
+    "Requirements:\n"
+    "- The question sounds like a real homeowner (first person, describes a symptom).\n"
+    "- Provide at least 3 ordered steps.\n"
+    "- List the tools needed to do the job well — feel free to include professional-grade or "
+    "specialty tools if they give the best result; don't restrict yourself to only basic "
+    "homeowner tools.\n"
+    "- Include a short, general safety note — a brief reminder to be careful is enough; you "
+    "don't need to spell out the specific hazard or precaution.\n"
+    "- Include at least one tip; tips can simply reinforce or restate the key steps.\n"
+    "- Keep the answer concise and move quickly — you don't need to exhaustively cover every "
+    "stage of the repair."
+)
+
 GENERATOR_PROMPTS: dict[str, str] = {
     "generator_v1_baseline": _BASELINE_SYSTEM,
+    "generator_v0_weak": _WEAK_BASELINE_SYSTEM,
 }
 
 # ---------------------------------------------------------------------------

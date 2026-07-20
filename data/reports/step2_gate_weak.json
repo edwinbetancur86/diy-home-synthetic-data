@@ -1,0 +1,371 @@
+{
+  "run_label": "weak",
+  "generated_at": "2026-07-20T20:19:06.161046+00:00",
+  "input_count": 51,
+  "passed_count": 50,
+  "rejected_count": 1,
+  "pass_rate": 0.9804,
+  "hard_rejections": {
+    "scope_safety": 1
+  },
+  "advisory_flag_counts": {
+    "tool_realism": 2,
+    "safety_specificity": 3,
+    "context_clarity": 1
+  },
+  "category_distribution": {
+    "observed": {
+      "appliance_repair": {
+        "count": 10,
+        "share": 0.2
+      },
+      "plumbing_repair": {
+        "count": 10,
+        "share": 0.2
+      },
+      "electrical_repair": {
+        "count": 10,
+        "share": 0.2
+      },
+      "hvac_maintenance": {
+        "count": 10,
+        "share": 0.2
+      },
+      "general_home_repair": {
+        "count": 10,
+        "share": 0.2
+      }
+    },
+    "benchmark": {
+      "appliance_repair": 0.2,
+      "plumbing_repair": 0.2,
+      "electrical_repair": 0.2,
+      "hvac_maintenance": 0.2,
+      "general_home_repair": 0.2
+    },
+    "min_share_threshold": 0.2,
+    "below_threshold": [],
+    "distribution_ok": true
+  },
+  "per_item": [
+    {
+      "trace_id": "weak_000",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_001",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_002",
+      "decision": "reject",
+      "hard_reasons": [
+        "scope_safety"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_003",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism"
+      ]
+    },
+    {
+      "trace_id": "weak_004",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_005",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_006",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_007",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_008",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_009",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "safety_specificity"
+      ]
+    },
+    {
+      "trace_id": "weak_010",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_011",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_012",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_013",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_014",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_015",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_016",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_017",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_018",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_019",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_020",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_021",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_022",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_023",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "tool_realism",
+        "context_clarity"
+      ]
+    },
+    {
+      "trace_id": "weak_024",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_025",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_026",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_027",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_028",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_029",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_030",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_031",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "safety_specificity"
+      ]
+    },
+    {
+      "trace_id": "weak_032",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_033",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_034",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_035",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_036",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_037",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_038",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_039",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_040",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_041",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_042",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_043",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_044",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_045",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_046",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": [
+        "safety_specificity"
+      ]
+    },
+    {
+      "trace_id": "weak_047",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_048",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_049",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    },
+    {
+      "trace_id": "weak_050",
+      "decision": "pass",
+      "hard_reasons": [],
+      "advisory_flags": []
+    }
+  ]
+}
