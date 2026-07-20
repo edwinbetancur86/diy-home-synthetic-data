@@ -1,0 +1,89 @@
+{
+  "before_run": "weak",
+  "after_run": "baseline",
+  "phase_a_calibration": {
+    "n": 30,
+    "per_dimension": {
+      "answer_completeness": {
+        "agreement": 0.9666666666666667,
+        "threshold": 0.8,
+        "meets": true
+      },
+      "safety_specificity": {
+        "agreement": 0.9333333333333333,
+        "threshold": 0.8,
+        "meets": true
+      },
+      "tool_realism": {
+        "agreement": 0.9333333333333333,
+        "threshold": 0.8,
+        "meets": true
+      },
+      "scope_appropriateness": {
+        "agreement": 0.9666666666666667,
+        "threshold": 0.8,
+        "meets": true
+      },
+      "context_clarity": {
+        "agreement": 1.0,
+        "threshold": 0.8,
+        "meets": true
+      },
+      "tip_usefulness": {
+        "agreement": 1.0,
+        "threshold": 0.8,
+        "meets": true
+      }
+    },
+    "overall_agreement": 0.9333333333333333,
+    "meets": true
+  },
+  "corrected_quality": {
+    "n": 50,
+    "per_dimension": {
+      "answer_completeness": {
+        "pass_rate": 1.0,
+        "threshold": 0.85,
+        "meets": true
+      },
+      "safety_specificity": {
+        "pass_rate": 1.0,
+        "threshold": 0.9,
+        "meets": true
+      },
+      "tool_realism": {
+        "pass_rate": 1.0,
+        "threshold": 0.95,
+        "meets": true
+      },
+      "scope_appropriateness": {
+        "pass_rate": 0.98,
+        "threshold": 0.95,
+        "meets": true
+      },
+      "context_clarity": {
+        "pass_rate": 1.0,
+        "threshold": 0.9,
+        "meets": true
+      },
+      "tip_usefulness": {
+        "pass_rate": 1.0,
+        "threshold": 0.85,
+        "meets": true
+      }
+    },
+    "overall_pass_rate": 0.98,
+    "overall_threshold": 0.8,
+    "meets": true
+  },
+  "phase_b_improvement": {
+    "before_fail_rate": 0.3,
+    "after_fail_rate": 0.02,
+    "before_n": 50,
+    "after_n": 50,
+    "improvement": 0.9333333333333332,
+    "threshold": 0.8,
+    "meets": true
+  },
+  "deliverable_met": true
+}

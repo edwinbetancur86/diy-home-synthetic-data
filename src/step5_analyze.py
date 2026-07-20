@@ -59,15 +59,15 @@ IMPROVEMENT_THRESHOLD = 0.80
 # ---------------------------------------------------------------------------
 # Loading.
 # ---------------------------------------------------------------------------
-def _load_labels(kind: str, run_label: str) -> list[dict]:
-    """Load a label file's `labels` list. kind is 'human' or 'judge'."""
+def load_labels(kind: str, run_label: str) -> list[dict]:
+    """Load a label file's `labels` list. kind is 'human' or 'judge'. Shared with Step 6."""
     path = LABELS_DIR / f"{kind}_{run_label}.json"
     if not path.exists():
         raise FileNotFoundError(f"Missing {path}. Run the {kind} labeling step for '{run_label}' first.")
     return json.loads(path.read_text(encoding="utf-8"))["labels"]
 
 
-def _load_categories(run_label: str) -> dict[str, str]:
+def load_categories(run_label: str) -> dict[str, str]:
     """Map trace_id -> category by reading the gated JSONL (labels don't carry the category)."""
     path = GENERATED_DIR / f"{run_label}_gated.jsonl"
     cats: dict[str, str] = {}
@@ -227,11 +227,11 @@ def run_analysis(before_label: str, after_label: str) -> dict:
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
     # Agreement uses the human labels + judge labels of the AFTER run (the clean one Edwin labeled).
-    human = _load_labels("human", after_label)
-    judge_after = _load_labels("judge", after_label)
-    judge_before = _load_labels("judge", before_label)
-    cats_after = _load_categories(after_label)
-    cats_before = _load_categories(before_label)
+    human = load_labels("human", after_label)
+    judge_after = load_labels("judge", after_label)
+    judge_before = load_labels("judge", before_label)
+    cats_after = load_categories(after_label)
+    cats_before = load_categories(before_label)
 
     agreement = compute_agreement(human, judge_after)
     quality_before = compute_quality(judge_before, cats_before)

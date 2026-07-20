@@ -135,6 +135,7 @@ python -m src.step2_gate                --run-label baseline             # 2. qu
 python -m src.step3_label               --run-label baseline             # 3. human labeling (interactive)
 python -m src.step4_judge               --run-label baseline             # 4. LLM-as-judge (API)
 python -m src.step5_analyze --before weak --after baseline               # 5. metrics + charts
+python -m src.step6_iterate --before weak --after baseline               # 6. deliverable verdict
 
 # Step 6 Phase B — the deliberately-weakened "before" run (see docs/iteration_log.md)
 python -m src.step1_generate --count 50 --run-label weak --version generator_v0_weak   # (API)

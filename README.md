@@ -61,6 +61,7 @@ python -m src.step4_judge               --run-label weak                # (API)
 
 # ── Analysis + charts (no API calls; reads the committed label files) ───────
 python -m src.step5_analyze --before weak --after baseline              # 5. metrics + visualizations
+python -m src.step6_iterate --before weak --after baseline              # 6. deliverable verdict (PASS/FAIL)
 ```
 
 Handy flags: `step4_judge --dry-run` prints a judge prompt without spending credits;
