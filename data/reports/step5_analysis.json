@@ -1,0 +1,128 @@
+{
+  "before_run": "weak",
+  "after_run": "baseline",
+  "agreement": {
+    "n": 30,
+    "per_dimension": {
+      "answer_completeness": {
+        "agree": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      "safety_specificity": {
+        "agree": 28,
+        "n": 30,
+        "rate": 0.9333333333333333
+      },
+      "tool_realism": {
+        "agree": 28,
+        "n": 30,
+        "rate": 0.9333333333333333
+      },
+      "scope_appropriateness": {
+        "agree": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      "context_clarity": {
+        "agree": 30,
+        "n": 30,
+        "rate": 1.0
+      },
+      "tip_usefulness": {
+        "agree": 30,
+        "n": 30,
+        "rate": 1.0
+      }
+    },
+    "overall_pass": {
+      "agree": 28,
+      "n": 30,
+      "rate": 0.9333333333333333
+    },
+    "meets_threshold": true
+  },
+  "quality_before": {
+    "n": 50,
+    "overall_fail": 15,
+    "overall_fail_rate": 0.3,
+    "per_dimension": {
+      "answer_completeness": {
+        "fail": 2,
+        "n": 50,
+        "fail_rate": 0.04
+      },
+      "safety_specificity": {
+        "fail": 2,
+        "n": 50,
+        "fail_rate": 0.04
+      },
+      "tool_realism": {
+        "fail": 13,
+        "n": 50,
+        "fail_rate": 0.26
+      },
+      "scope_appropriateness": {
+        "fail": 3,
+        "n": 50,
+        "fail_rate": 0.06
+      },
+      "context_clarity": {
+        "fail": 0,
+        "n": 50,
+        "fail_rate": 0.0
+      },
+      "tip_usefulness": {
+        "fail": 0,
+        "n": 50,
+        "fail_rate": 0.0
+      }
+    }
+  },
+  "quality_after": {
+    "n": 50,
+    "overall_fail": 1,
+    "overall_fail_rate": 0.02,
+    "per_dimension": {
+      "answer_completeness": {
+        "fail": 0,
+        "n": 50,
+        "fail_rate": 0.0
+      },
+      "safety_specificity": {
+        "fail": 0,
+        "n": 50,
+        "fail_rate": 0.0
+      },
+      "tool_realism": {
+        "fail": 0,
+        "n": 50,
+        "fail_rate": 0.0
+      },
+      "scope_appropriateness": {
+        "fail": 1,
+        "n": 50,
+        "fail_rate": 0.02
+      },
+      "context_clarity": {
+        "fail": 0,
+        "n": 50,
+        "fail_rate": 0.0
+      },
+      "tip_usefulness": {
+        "fail": 0,
+        "n": 50,
+        "fail_rate": 0.0
+      }
+    }
+  },
+  "improvement": {
+    "before_fail_rate": 0.3,
+    "after_fail_rate": 0.02,
+    "before_n": 50,
+    "after_n": 50,
+    "improvement": 0.9333333333333332,
+    "threshold": 0.8,
+    "passes": true
+  }
+}
